@@ -1,6 +1,7 @@
 
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
+let clickList = ["up-btn","down-btn","left-btn","right-btn"];
 let speed = 15;
 let scale = 10; 
 let snake;
@@ -61,11 +62,31 @@ const drawGame = () => {
     
 
 }
+for (let i=0; i<clickList.length;i++){
+    let id = document.getElementById(clickList[i])
+    id.addEventListener("click", (() => {
+    snake.updateDirectionClick(clickList[i]);
+}));
+
+}
+// let id = document.getElementById(clickList[0])
+// id.addEventListener("click", (() => {
+//     snake.updateDirectionClick(clickList[0]);
+// }));
+
 
 window.addEventListener('keydown', ((evt) => {
     const direction = evt.key.replace('Arrow', '');
     snake.updateDirection(direction);
 }) )
+
+
+
+// for (let i=0; i < clickList.length; i++){
+//     let id = document.getElementById(clickList[i]);
+//     id.addEventListener('click', console.log(clickList[i]))
+// }
+
 
 drawGame();
 

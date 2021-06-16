@@ -7,13 +7,26 @@
         <title>Snake</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="container">
         <canvas id = "game" height="400" width="400" style="background-color: darkgrey;"> </canvas>
+        <section>
+            <div id="top-button">
+                <button id="up-btn"class = "btn-info w-25 h-100"></button>
+            </div>
+            <div id="buttons" class="btn-group">
+                <button id="left-btn" class = "btn-info w-25 h-25"></button>
+                <button id="down-btn" class = "btn-info w-25 h-25"></button>
+                <button id="right-btn" class = "btn-info w-25 h-25"></button>
+            </div>
+        </section>
+
         <script type = "text/javascript" src = "snake.js"></script>
         <script type = "text/javascript" src = "apples.js"></script>
         <script type = "text/javascript" src = "scoreboard.js"></script>
+        <script type = "text/javascript" src = "touchcontroller.js"></script>
         <script type = "text/javascript" src = "sketch.js"></script>
     </body>
 

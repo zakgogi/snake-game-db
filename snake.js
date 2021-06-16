@@ -77,6 +77,36 @@ class Snake {
 
     }
 
+    updateDirectionClick(direction){
+        switch(direction){
+            case 'up-btn':
+                if (this.yVelocity <= 0){
+                    this.xVelocity = 0;
+                    this.yVelocity = -scale * 1;
+                }
+                break;
+            case 'down-btn':
+                if (this.yVelocity >= 0){
+                    this.xVelocity = 0;
+                    this.yVelocity = scale * 1;
+                }
+                break;
+            case 'left-btn':
+                if (this.xVelocity <= 0){
+                    this.xVelocity = -scale * 1;
+                    this.yVelocity = 0;
+                }
+                break;       
+            case 'right-btn':
+                if (this.xVelocity >= 0){
+                this.xVelocity = scale * 1;
+                this.yVelocity = 0;
+                }
+                break;
+        }
+
+    }
+
     eat(apple){
         if (apple.x === this.x && apple.y === this.y){
             this.applesEaten++;

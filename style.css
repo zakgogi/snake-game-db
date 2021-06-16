@@ -1,0 +1,22 @@
+#buttons {
+  height: 250px;
+  width: 400px;
+  display: block;
+  margin-left: 60px;
+  margin-right: auto;
+  width: 33%;
+}
+
+body {
+  margin: 10px 0 0 0 !important;
+  height: 850px;
+  width: 400px;
+}
+
+#top-button {
+  height: 62.5px;
+  width: 33%;
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 155px;
+}
