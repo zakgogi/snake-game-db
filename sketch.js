@@ -80,7 +80,11 @@ window.addEventListener('keydown', ((evt) => {
     snake.updateDirection(direction);
 }) )
 
-
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
 
 // for (let i=0; i < clickList.length; i++){
 //     let id = document.getElementById(clickList[i]);
