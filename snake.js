@@ -1,8 +1,8 @@
 
 class Snake {
     constructor(){ 
-        this.x = 190;
-        this.y = 190;
+        this.x = 200;
+        this.y = 200;
         this.xVelocity = 0;
         this.yVelocity = 0;
         this.applesEaten = 0;
