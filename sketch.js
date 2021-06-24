@@ -36,7 +36,10 @@ const drawGame = () => {
         
 
         if (snake.isDead()){
-            snake = new Snake();
+            
+            alert('Game over!')
+            location.assign("http://127.0.0.1:5500/deadscreen.html");
+            // snake = new Snake();
         }
 
         // if (snake.eat(bigApple)){
