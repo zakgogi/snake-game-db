@@ -5,11 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game over screen</title>
+    <script defer src="deadscreen.js"></script>
 </head>
 <body>
     <h1>Dead</h1>
+    <h2 id="finalScore"></h2>
+    <form>
+        <input id="usernameInput" type="text" placeholder="your name goes here">
+        <input id="submitBtn" type="submit" value="record score">
+    </form>
+    <table id=highScoreField>
+        <tr>
+            <th>Username</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td id="user1">a</td>
+            <td id="hs1">1</td>
+            
+        </tr>
+        <tr>
+            <td id="user2">b</td>
+            <td id="hs2">2</td>
+        </tr>
+        <tr>
+            <td id="user3">c</td>
+            <td id="hs3">3</td>
+        </tr>
+        <tr>
+            <td id="user4">d</td>
+            <td id="hs4">4</td>
+        </tr>
+        <tr>
+            <td id="user5">e</td>
+            <td id="hs5">5</td>
+        </tr>
+
+    </table>
     <button>
-        <a href="home.html">Go home</a>
+        <a href="index.html">Try again</a>
     </button>
 </body>
 </html>
