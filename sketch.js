@@ -38,7 +38,7 @@ const drawGame = () => {
         if (snake.isDead()){
             
             localStorage.setItem("mostRecentScore", snake.applesEaten);
-            // location.assign("http://127.0.0.1:5500/deadscreen.html");
+            //location.assign("http://127.0.0.1:5500/deadscreen.html");
             location.assign("https://snakejsgogi.netlify.app/deadscreen");
             // snake = new Snake();
         }
