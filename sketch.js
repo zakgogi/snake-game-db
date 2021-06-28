@@ -68,10 +68,12 @@ const drawGame = () => {
 }
 for (let i=0; i<clickList.length;i++){
     let id = document.getElementById(clickList[i])
-    id.addEventListener("click", (() => {
+    id.addEventListener("click", ((evt) => {
+        evt.preventDefault();
         snake.updateDirectionClick(clickList[i]);
     }));
-    id.addEventListener("touchstart", (() => {
+    id.addEventListener("touchstart", ((evt) => {
+        evt.preventDefault();
         snake.updateDirectionClick(clickList[i]);
     }));
 
