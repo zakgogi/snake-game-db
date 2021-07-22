@@ -9,6 +9,15 @@ router.get('/', async (req, res) => {
     } catch (err) {
         res.status(500).json({err});
     }
-})
+});
+
+router.post('/', async (req, res) => {
+    try {
+        const post = await HighScore.create(req.body);
+        res.status(201).json(post)
+    } catch (err) {
+        res.status(422).json({err})
+    }
+});
 
 module.exports = router;
