@@ -1,4 +1,4 @@
-const db = require ('./dbConfig')
+const db = require ('../dbConfig')
 
 class HighScore {
     constructor(data){
@@ -14,7 +14,6 @@ class HighScore {
                 const scores = scoreData.rows.map(d => new HighScore(d))
                 resolve(scores);
             } catch (err) {
-                
                 reject("Error retrieving score")
             }
         })
