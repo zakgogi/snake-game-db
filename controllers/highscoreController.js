@@ -1,5 +1,5 @@
 const express = require('express');
-const HighScore = require('../models/highscores');
+const HighScore = require('../highscores');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
