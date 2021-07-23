@@ -14,6 +14,7 @@ class HighScore {
                 const scores = scoreData.rows.map(d => new HighScore(d))
                 resolve(scores);
             } catch (err) {
+                
                 reject("Error retrieving score")
             }
         })

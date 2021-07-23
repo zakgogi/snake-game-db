@@ -1,19 +1,7 @@
 version: "3"
 services:
-  client:
-    build: ./client
-    image: debug_client
-    ports:
-      - 8080:8080
-    working_dir: /code
-    volumes:
-      - type: bind
-        source: ./client
-        target: /code
-    command: ["http-server"]
   server:
-    build: .
-    image: node:12.18.4
+    build: ./server
     ports:
       - 3000:3000
     environment:
@@ -21,6 +9,7 @@ services:
       - PGHOST=db
       - PGPASSWORD=scorepass97
       - PGDATABASE=scores
+      - DATABASE_URL=postgres://zakgogi:scorepass97@db:5432/scores
     depends_on:
       - db
     volumes:
@@ -28,7 +17,7 @@ services:
         source: ./server
         target: /code
     working_dir: /code
-    command: bash -c "npm install && npm start"
+    command: bash -c "npm install && npm run dev"
 
   db:
     image: postgres:latest
